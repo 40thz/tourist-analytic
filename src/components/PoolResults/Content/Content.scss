@@ -1,0 +1,146 @@
+.poolresults,
+.officalstat,
+#reportpage {
+	.tooltip {
+		&::after {
+			left: initial;
+			right: calc(100% + 10px);
+			top: 100%;
+		}
+		path {
+			fill: $dark-blue;
+		}
+	}
+	&__content {
+		overflow: hidden;
+		border: 1px solid $gray-line;
+		border-radius: 12px;
+		background: #fff;
+		&-title {
+			display: flex;
+			align-items: center;
+			background: $gray;
+			padding: 18px 30px;
+			font-size: 14px;
+			width: 100%;
+			@include MS;
+			justify-content: space-between;
+		}
+		&-body {
+			padding: 20px 20px;
+			box-sizing: border-box;
+			width: 100%;
+		}
+		&-box {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 25px;
+		}
+	}
+	.contentbox1fr {
+		.poolresults__content-box {
+			grid-template-columns: 1fr;
+		}
+	}
+	.content-box {
+		overflow: hidden;
+
+		&.mapContentBox {
+			.poolresults__content-box {
+				margin-top: 25px;
+				grid-template-columns: 0.5fr 1fr;
+				grid-template-rows: auto;
+				grid-template-areas:
+					'map graph'
+					'map graph2';
+			}
+			.poolresults__content:nth-child(1) {
+				display: flex;
+				flex-direction: column;
+
+				align-items: center;
+				grid-area: map;
+			}
+			.poolresults__content:nth-child(2) {
+				grid-area: graph;
+			}
+			.poolresults__content:nth-child(3) {
+				grid-area: graph2;
+			}
+		}
+
+		&.lastContentBox {
+			.poolresults__content-box {
+				margin-top: 25px;
+				grid-template-columns: 1fr 1fr;
+				grid-template-rows: 0.5fr 1fr;
+				grid-template-areas:
+					'graph1 graph2'
+					'graph1 graph3';
+			}
+			.poolresults__content:nth-child(1) {
+				grid-area: graph1;
+			}
+			.poolresults__content:nth-child(2) {
+				grid-area: graph2;
+			}
+			.poolresults__content:nth-child(3) {
+				grid-area: graph3;
+			}
+		}
+		.title {
+			font-size: 22px;
+			margin-bottom: 32px;
+			margin-top: 65px;
+		}
+	}
+}
+
+.content2fr {
+	.poolresults__content-body {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 25px;
+	}
+}
+
+@media screen and (max-width: 1480px) {
+	body #reportpage .options {
+		grid-column-start: auto;
+		grid-column-end: auto;
+		grid-row-start: auto;
+		grid-row-end: auto;
+	}
+	.poolresults__content-box,
+	.officalstat__content-box,
+	#reportpage__content-box {
+		grid-template-columns: 1fr;
+	}
+
+	.poolresults .content-box.mapContentBox .poolresults__content-box,
+	.officalstat .content-box.mapContentBox .poolresults__content-box,
+	#reportpage .content-box.mapContentBox .poolresults__content-box {
+		grid-template-areas:
+			'map graph'
+			'graph2 graph2';
+	}
+
+	.poolresults .content-box.lastContentBox .poolresults__content-box,
+	.officalstat .content-box.lastContentBox .poolresults__content-box,
+	#reportpage .content-box.lastContentBox .poolresults__content-box {
+		grid-template-areas:
+			'graph3 graph2'
+			'graph1 graph1';
+	}
+
+	body .officalstat-three .poolresults__content-box {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	body
+		.officalstat-three.twoToOne
+		.poolresults__content-box
+		.poolresults__content:last-child {
+		grid-column: auto;
+	}
+}

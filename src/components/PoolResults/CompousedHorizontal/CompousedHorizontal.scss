@@ -1,0 +1,14 @@
+.compousedLegend {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	font-size: 14px;
+	color: #606c80;
+	padding-left: 30px;
+	&-item {
+		display: flex;
+		align-items: center;
+		gap: 25px;
+	}
+}

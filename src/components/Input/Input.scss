@@ -1,0 +1,35 @@
+.input__container {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	label {
+		@include MS;
+		color: hsl(0, 0%, 50%);
+		font-size: 19px;
+	}
+	input.input {
+		@include MM;
+		transition: all 0.3s;
+		cursor: pointer;
+		border: 1px solid $gray;
+		background-color: $gray;
+		border-color: hsl(0, 0%, 90%);
+		border-radius: 12px;
+		padding: 0.6rem 1rem;
+		color: hsl(0, 0%, 50%);
+		&:focus {
+			background-color: rgba($color: $grayBg, $alpha: 0.4);
+			outline: none;
+		}
+		&[type='submit'] {
+			background: $blue;
+			color: $white;
+			&:hover {
+				background-color: rgba($color: $blue, $alpha: 0.9);
+			}
+		}
+		&:hover {
+			background-color: rgba($color: $grayBg, $alpha: 0.2);
+		}
+	}
+}

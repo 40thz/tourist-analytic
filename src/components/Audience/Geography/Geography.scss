@@ -1,0 +1,46 @@
+.geography {
+	display: grid;
+	grid-template-columns: 2fr;
+	gap: 25px;
+}
+
+.travellers__container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 25px;
+	.checkboxLabel {
+		display: flex;
+	}
+	.inputContainer {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+	}
+	.travellers-box {
+		display: flex;
+		gap: 8px;
+	}
+	.checkbox {
+		display: none;
+
+		&:checked ~ .travellers-box .checkboxLabel {
+			background: $white;
+			.checkboxLabel-checked {
+				display: flex;
+				svg {
+					path {
+						fill: $blue;
+					}
+				}
+			}
+		}
+	}
+	label {
+		padding: 15px 35px;
+		background: $blue;
+		border-radius: 12px;
+		span {
+			color: $white;
+		}
+	}
+}

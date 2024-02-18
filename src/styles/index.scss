@@ -1,0 +1,57 @@
+@import '~normalize-css/normalize.css';
+
+@import 'fonts';
+@import 'vars';
+@import 'global';
+
+// Reusable
+@import '../components/Logo/Logo.scss';
+@import '../components/Title/Title.scss';
+@import '../components/Tooltip/Tooltip.scss';
+@import '../components/Statistics/Plug/Plug.scss';
+@import '../components/Statistics/Loader/Loader.scss';
+@import '../components/CustomSelector/CustomSelector.scss';
+@import '../components/Input/Input.scss';
+@import '../components/FileUploader/FileUploader.scss';
+@import '../components/MapContainer/MapContainer.scss';
+
+// AuthPage
+@import '../components/AuthPage/AuthPage.scss';
+
+// Dashboard
+@import '../components/Dashboard.scss';
+@import '../components/DashboardPanel/DashboardPanel.scss';
+@import '../components/DashboardPanel/DashboardList/DashboardList.scss';
+
+// Audience
+@import '../components/Audience/Audience.scss';
+@import '../components/Audience/Geography/Geography.scss';
+@import '../components/Audience/Demography/Demography.scss';
+@import '../components/Audience/Demography/Age/Age.scss';
+@import '../components/Audience/Demography/Gender/Gender.scss';
+@import '../components/Audience/Counter/Counter.scss';
+@import '../components/Audience/Interests/Interests.scss';
+
+// Statistics
+@import '../components/Statistics/Statistics.scss';
+@import '../components/Statistics/StatisticsTable/StatisticsTable.scss';
+@import '../components/Statistics/StatisticsTable/StatisticsRegion/StatisticsRegion.scss';
+@import '../components/Statistics/HistoryGraph/HistoryGraph.scss';
+@import '../components/Statistics/StatisticsTableRegion/StatisticsTableRegion.scss';
+
+// PoolResults
+@import '../components/PoolResults/PoolResults.scss';
+@import '../components/PoolResults/Content/Content.scss';
+@import '../components/PoolResults/PieGraphic/CustomLegend.scss';
+@import '../components/PoolResults/HorizontalStacked/HorizontalStacked.scss';
+@import '../components/PoolResults/VerticalStacked/VerticalStacked.scss';
+@import '../components/PoolResults/CompousedHorizontal/CompousedHorizontal.scss';
+@import '../components/PoolResults/Line/Line.scss';
+@import '../components/PoolResults/MapGraphic/MapGraphic.scss';
+
+// OfficalStatistic
+@import '../components/Officalstat/Officalstat.scss';
+@import '../components/Officalstat/PieGraphic/PieGraphic.scss';
+
+//Report
+@import '../components/ReportPage/ReportPage.scss';

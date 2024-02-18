@@ -1,0 +1,82 @@
+.recharts-wrapper {
+	width: 100%;
+}
+
+.recharts-cartesian-axis-tick-line {
+	display: none;
+}
+.statistic__history {
+	.statistics__table-header {
+		grid-template-columns: 3.5fr;
+	}
+}
+.recharts-wrapper {
+	background: $blue;
+	border-radius: 12px;
+	box-sizing: border-box;
+	@include MM;
+
+	.xAxis {
+		padding-top: 40px;
+	}
+}
+.recharts-cartesian-axis-ticks {
+	margin-top: 200px;
+}
+.recharts-cartesian-axis-line {
+	display: none;
+}
+
+.custom-tooltip {
+	display: flex;
+	flex-direction: column;
+	background: rgba($color: #000000, $alpha: 0.6);
+	padding: 10px 10px;
+	border-radius: 5px;
+	font-size: 14px;
+	color: $white;
+	gap: 15px;
+	.label {
+		position: relative;
+		padding-left: 15px;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 51%;
+			transform: translateY(-50%);
+			left: 0;
+			width: 6px;
+			height: 6px;
+			border-radius: 100%;
+		}
+		&.fyear {
+			&::before {
+				background: #fff;
+				border: 2px solid #fff;
+			}
+		}
+		&.lyear {
+			&::before {
+				background: #f54994;
+				border: 2px solid #fff;
+			}
+		}
+		&.last {
+			&::before {
+				background: #1ced09;
+				border: 2px solid #fff;
+			}
+		}
+	}
+
+	&-body {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	&-item {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+	}
+}

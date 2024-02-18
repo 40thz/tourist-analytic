@@ -1,0 +1,16 @@
+.react-select-container {
+	.react-select__menu {
+		border-radius: 12px;
+		overflow: hidden;
+		border: none;
+	}
+}
+.react-select-up__container {
+	.react-select-up__menu {
+		border-radius: 12px;
+		overflow: hidden;
+		border: none;
+		top: auto;
+		bottom: 100%;
+	}
+}

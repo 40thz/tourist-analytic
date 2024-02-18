@@ -1,0 +1,29 @@
+#statistic-page {
+	height: 100%;
+}
+
+.statistic-page-wrapper {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 0.5fr 1fr;
+	grid-template-areas:
+		'one two'
+		'one three';
+	height: 100%;
+	gap: 25px;
+}
+
+.statistic-page-colum {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.css-1s2u09g-control {
+	border-radius: 30px;
+}
+
+.statistics__header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}

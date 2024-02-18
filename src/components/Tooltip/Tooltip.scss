@@ -1,0 +1,25 @@
+.tooltip {
+	position: relative;
+	cursor: pointer;
+	svg {
+		opacity: 0.6;
+	}
+	&:hover::after {
+		content: attr(data-tooltip);
+		position: absolute;
+		left: 102%;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 1;
+		background: #f7f8fa;
+		border: 1px solid #dfe2e9;
+		border-radius: 12px;
+		font-size: 12px;
+		padding: 5px 10px;
+		text-align: left;
+		width: 300px;
+		padding: 20px 30px;
+		color: $dark-blue;
+		word-wrap: break-word;
+	}
+}

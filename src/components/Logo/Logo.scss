@@ -1,0 +1,16 @@
+.logo-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	svg.logo {
+		min-width: 75px;
+		min-height: 75px;
+	}
+}
+
+.logo-title {
+	transition: all 0.2s;
+	min-width: 240px;
+	min-height: 50px;
+}

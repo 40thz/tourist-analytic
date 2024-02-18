@@ -1,0 +1,11 @@
+section#dashboard {
+	height: auto;
+	width: 100vw;
+	display: flex;
+}
+
+.dashboard__inside {
+	padding: 65px;
+	width: 100%;
+	box-sizing: border-box;
+}

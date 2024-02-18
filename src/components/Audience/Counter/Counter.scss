@@ -1,0 +1,48 @@
+.audience__counter {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	border-radius: 12px;
+	background: $dark;
+	padding: 48px;
+	@include MS;
+
+	&-shows {
+		.countUp {
+			display: flex;
+			justify-content: space-between;
+			padding: 15px;
+			border: 1px solid #465163;
+			border-radius: 12px;
+			color: $white;
+		}
+
+		&:last-child {
+			.countUp {
+				border: none;
+				background: $blue;
+			}
+		}
+	}
+
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.tooltip {
+			position: relative;
+
+			&:hover::after {
+				width: 250px;
+				max-width: 250px;
+				left: initial;
+				right: 30px;
+			}
+		}
+		span {
+			font-size: 14px;
+			color: #888f9f;
+			margin-bottom: 10px;
+		}
+	}
+}

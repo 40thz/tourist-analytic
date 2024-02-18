@@ -1,0 +1,58 @@
+.checkbox {
+	display: none;
+	&:hover {
+		& ~ span {
+			opacity: 0.6;
+		}
+	}
+	&:checked ~ .checkboxLabel {
+		background: $blue;
+		.checkboxLabel-checked {
+			display: flex;
+		}
+
+		& ~ span {
+			opacity: 1;
+			&:hover {
+				opacity: 1;
+				& ~ .checkboxLabel {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.checkboxLabel {
+	width: 24px;
+	height: 24px;
+	background: $grayBg;
+	border-radius: 4px;
+	&-checked {
+		display: none;
+	}
+}
+
+.inputContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-top: 20px;
+	span {
+		color: $dark-blue;
+		font-size: 14px;
+		@include MM;
+		&:hover {
+			opacity: 0.6;
+			& ~ .checkboxLabel {
+				opacity: 0.6;
+			}
+		}
+	}
+}
+
+.label {
+	cursor: pointer;
+	display: flex;
+	gap: 8px;
+}

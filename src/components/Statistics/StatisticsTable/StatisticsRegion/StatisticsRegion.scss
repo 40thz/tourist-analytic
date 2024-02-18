@@ -1,0 +1,47 @@
+.statistic-item {
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: 0.5fr 3fr 2.5fr;
+	box-sizing: border-box;
+	color: $dark;
+	font-weight: 700;
+	@include MS;
+	font-size: 16px;
+	border-top: 1px solid $gray;
+	border-bottom: 1px solid $gray;
+	user-select: none;
+	&-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&-name {
+		border-right: 1px solid $gray-line;
+		padding: 15px 15px 15px 0px;
+
+		&::first-letter {
+			text-transform: uppercase;
+		}
+	}
+	&-count {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&-items {
+		.statistic-item {
+			grid-template-columns: 0.7fr 2.8fr 2.5fr;
+			&-icon {
+				margin-left: 10px;
+			}
+			@include MM;
+			&.locations {
+				font-size: 14px;
+			}
+			&.phrase {
+				font-size: 12px;
+			}
+		}
+	}
+}

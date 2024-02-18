@@ -1,0 +1,48 @@
+.statistics__tableRegions-wrapper {
+	position: relative;
+	grid-area: three;
+	height: calc(100% - 65px);
+}
+
+.statistics__tableRegions {
+	overflow: auto;
+	&-labels {
+		display: grid;
+		grid-template-columns: 3.5fr 2.5fr;
+		background: $gray;
+		box-sizing: border-box;
+		color: $dark-blue;
+		@include MM;
+		font-size: 16px;
+		.statistics__tableRegions-label {
+			&:first-child,
+			&:last-child {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: 20px 0;
+				text-align: center;
+			}
+			&:first-child {
+				justify-content: flex-start;
+				padding: 0px 0 0 30px;
+				border-right: 1px solid $gray-line;
+			}
+		}
+	}
+
+	&-item {
+		display: grid;
+		grid-template-columns: 3.5fr 2.5fr;
+		border-bottom: 1px solid #dfe2e9;
+		@include MS;
+		&-name {
+			padding: 15px 0 15px 30px;
+			border-right: 1px solid #dfe2e9;
+		}
+		&-count {
+			padding: 15px 0;
+			text-align: center;
+		}
+	}
+}
